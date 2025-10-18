@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farewell Celebration 2025 - CSE Department</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP and ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .hero-bg {
+      background: url('https://images.unsplash.com/photo-1519750157634-b6d493a0f77c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      height: 100vh;
+    }
+    .parallax {
+      transform: translateY(0);
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    .image-placeholder {
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2rem;
+      border-radius: 0.5rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 1.5rem;
+      width: 12px;
+      height: 12px;
+      background: #ff6b6b;
+      border-radius: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 1.75rem;
+      top: 2rem;
+      bottom: -2rem;
+      width: 2px;
+      background: #ff6b6b;
+    }
+    .schedule-item {
+      transition: transform 0.3s ease;
+    }
+    .schedule-item:hover {
+      transform: translateX(10px);
+    }
+    .message-card {
+      border-left: 4px solid #ff6b6b;
+      transition: transform 0.3s ease;
+    }
+    .message-card:hover {
+      transform: translateY(-5px);
+    }
+    .organizer-card {
+      transition: transform 0.3s ease;
+    }
+    .organizer-card:hover {
+      transform: translateY(-5px);
+    }
+    /* Splash Screen Styles */
+    #splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    #splash-screen img {
+      max-width: 80%;
+      max-height: 60%;
+      object-fit: contain;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    #splash-screen p {
+      color: white;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="animate-splash">
+    <img src="images/Farewell Invatation-GIET Polytechnic CSE.png" alt="Farewell Celebration Splash">
+    <p>Click anywhere to enter the Farewell Celebration 2025</p>
+  </div>
+
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- Hero Section -->
+  <header class="hero-bg relative flex items-center justify-center text-center text-white h-screen">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10">
+      <h1 class="text-5xl md:text-7xl font-bold animate-hero">Farewell Celebration 2025</h1>
+      <p class="mt-4 text-xl md:text-2xl animate-hero-delay">A Heartfelt Goodbye to Our Inspiring Leaders</p>
+      <a href="#event-details" class="mt-6 inline-block bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition">Join the Celebration</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-6xl mx-auto p-6 space-y-20 relative z-10">
+    <!-- Event Details (Timeline Style) -->
+    <section id="event-details" class="relative">
+      <h2 class="text-4xl font-bold text-center text-purple-600 mb-12">Event Details</h2>
+      <div class="space-y-8">
+        <div class="timeline-item relative pl-12 animate-timeline bg-white bg-opacity-90 rounded-lg p-4 shadow-lg">
+          <h3 class="text-2xl font-semibold text-pink-600">Date</h3>
+          <p class="mt-2 text-lg">June 10, 2025</p>
+        </div>
+        <div class="timeline-item relative pl-12 animate-timeline bg-white bg-opacity-90 rounded-lg p-4 shadow-lg">
+          <h3 class="text-2xl font-semibold text-pink-600">Time</h3>
+          <p class="mt-2 text-lg">Starts at 9:30 AM</p>
+        </div>
+        <div class="timeline-item relative pl-12 animate-timeline bg-white bg-opacity-90 rounded-lg p-4 shadow-lg">
+          <h3 class="text-2xl font-semibold text-pink-600">Location</h3>
+          <p class="mt-2 text-lg">RK Block - Seminar Hall</p>
+        </div>
+        <div class="timeline-item relative pl-12 animate-timeline bg-white bg-opacity-90 rounded-lg p-4 shadow-lg">
+          <h3 class="text-2xl font-semibold text-pink-600">Activities</h3>
+          <p class="mt-2 text-lg">Dance Performances, Interactive Games, and More</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Schedule -->
+    <section id="schedule" class="relative">
+      <h2 class="text-4xl font-bold text-center text-blue-600 mb-12">Event Schedule</h2>
+      <div class="space-y-6">
+        <div class="schedule-item bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-schedule">
+          <h3 class="text-xl font-semibold text-purple-600">9:30 AM - Welcome Address</h3>
+          <p class="mt-2 text-lg">Opening remarks and introduction to the farewell ceremony.</p>
+        </div>
+        <div class="schedule-item bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-schedule">
+          <h3 class="text-xl font-semibold text-purple-600">10:00 AM - Dance Performances</h3>
+          <p class="mt-2 text-lg">Vibrant dance routines by students to celebrate our honorees.</p>
+        </div>
+        <div class="schedule-item bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-schedule">
+          <h3 class="text-xl font-semibold text-purple-600">11:00 AM - Fun Activities</h3>
+          <p class="mt-2 text-lg">Interactive games and group activities for all attendees.</p>
+        </div>
+        <div class="schedule-item bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-schedule">
+          <h3 class="text-xl font-semibold text-purple-600">12:00 PM - Farewell Speeches</h3>
+          <p class="mt-2 text-lg">Heartfelt messages from students and faculty.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honorees Section (Card Style) -->
+    <section id="honorees" class="bg-white bg-opacity-80 rounded-lg p-8 shadow-2xl">
+      <h2 class="text-4xl font-bold text-center text-green-600 mb-12">Our Honorees</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card bg-white rounded-lg shadow-lg p-6 text-center animate-card">
+          <div class="image-placeholder h-48 w-full">Add Image for Ramanujam</div>
+          <h3 class="mt-4 text-xl font-semibold">Ramanujam Sir</h3>
+          <p class="text-gray-600">Principal</p>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-6 text-center animate-card">
+          <div class="image-placeholder h-48 w-full">Add Image for Kiran Babu Sir</div>
+          <h3 class="mt-4 text-xl font-semibold">Kiran Babu Sir</h3>
+          <p class="text-gray-600">Administrative Vice Principal</p>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-6 text-center animate-card">
+          <div class="image-placeholder h-48 w-full">Add Image for Ramarao Sir</div>
+          <h3 class="mt-4 text-xl font-semibold">Ramarao Sir</h3>
+          <p class="text-gray-600">Vice Principal</p>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-6 text-center animate-card">
+          <div class="image-placeholder h-48 w-full">Add Image for Monica</div>
+          <h3 class="mt-4 text-xl font-semibold">Monica Mam</h3>
+          <p class="text-gray-600">HOD of CSE</p>
+        </div>
+        <div class="card bg-white rounded-lg shadow-lg p-6 text-center animate-card">
+          <div class="image-placeholder h-48 w-full">Add Image for Monica</div>
+          <h3 class="mt-4 text-xl font-semibold">Ashok Sir</h3>
+          <p class="text-gray-600">Lab</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="messages" class="relative">
+      <h2 class="text-4xl font-bold text-center text-orange-600 mb-12">Messages from the Heart</h2>
+      <div class="space-y-6">
+        <div class="message-card bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-message">
+          <p class="text-lg italic">"Your guidance has shaped our future. Thank you, Ramanujam!"</p>
+          <p class="mt-2 text-sm font-semibold text-gray-600">- Student Council</p>
+        </div>
+        <div class="message-card bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-message">
+          <p class="text-lg italic">"Ramarao Sir, your wisdom will always inspire us."</p>
+          <p class="mt-2 text-sm font-semibold text-gray-600">- Faculty Team</p>
+        </div>
+        <div class="message-card bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-message">
+          <p class="text-lg italic">"Monica Mam, your leadership in CSE is unforgettable."</p>
+          <p class="mt-2 text-sm font-semibold text-gray-600">- CSE Department</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="relative">
+      <h2 class="text-4xl font-bold text-center text-blue-600 mb-12">Memories Gallery</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 animate-gallery">
+        <div class="image-placeholder w-full aspect-[4/3] rounded-lg overflow-hidden">Photo-CME1</div>
+        <div class="image-placeholder w-full aspect-[4/3] rounded-lg bg-gray-200 flex items-center justify-center text-gray-500">Photo-CME2</div>
+        <div class="image-placeholder w-full aspect-[4/3] rounded-lg bg-gray-200 flex items-center justify-center text-gray-500">Photo-CME3</div>
+        <div class="image-placeholder w-full aspect-[4/3] rounded-lg bg-gray-200 flex items-center justify-center text-gray-500">Photo-CCN</div>
+      </div>
+    </section>
+
+    <!-- Farewell Highlights Section -->
+    <section id="farewell-highlights" class="relative">
+      <h2 class="text-4xl font-bold text-center text-pink-600 mb-12">Farewell Highlights</h2>
+      <div class="animate-iframe">
+        <iframe src="https://divakarflutter9.github.io/new-farewell-party/" class="w-full h-[600px] rounded-lg shadow-lg" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Organized By Section -->
+    <section id="organized-by" class="relative">
+      <h2 class="text-4xl font-bold text-center text-orange-600 mb-12">Organized By</h2>
+      <div class="organizer-card bg-white bg-opacity-90 rounded-lg p-6 shadow-lg animate-organizer">
+        <h3 class="text-xl font-semibold text-purple-600">CSE Department Class Representatives</h3>
+        <p class="mt-2 text-lg">This farewell event is proudly executed and maintained by the Class Representatives of the Computer Science and Engineering Department, dedicated to honoring our esteemed leaders.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-8 relative z-10">
+    <p>© 2025 Farewell Celebration. Organized with love by the CSE CRs.</p>
+  </footer>
+
+  <script>
+    // Initialize Particles.js
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: true },
+        size: { value: 5, random: true },
+        line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 3, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Splash Screen Animation and Interaction
+    gsap.from('#splash-screen', {
+      opacity: 0,
+      duration: 1,
+      ease: 'power2.out'
+    });
+    document.getElementById('splash-screen').addEventListener('click', function() {
+      gsap.to('#splash-screen', {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.in',
+        onComplete: function() {
+          document.getElementById('splash-screen').style.display = 'none';
+        }
+      });
+    });
+
+    // Parallax Hero Background
+    gsap.to('.hero-bg', {
+      backgroundPosition: '50% 100%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero-bg',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+
+    // Hero Text Animation
+    gsap.from('.animate-hero', { opacity: 0, y: 50, duration: 1.5, ease: 'power3.out' });
+    gsap.from('.animate-hero-delay', { opacity: 0, y: 50, duration: 1.5, delay: 0.5, ease: 'power3.out' });
+
+    // Timeline Items Animation
+    gsap.utils.toArray('.timeline-item').forEach((item, i) => {
+      gsap.from(item, {
+        opacity: 0, x: -50, duration: 1, delay: i * 0.2, ease: 'power2.out',
+        scrollTrigger: { trigger: item, start: 'top 80%' }
+      });
+    });
+
+    // Schedule Items Animation
+    gsap.utils.toArray('.schedule-item').forEach((item, i) => {
+      gsap.from(item, {
+        opacity: 0, x: -50, duration: 1, delay: i * 0.2, ease: 'power2.out',
+        scrollTrigger: { trigger: item, start: 'top 80%' }
+      });
+    });
+
+    // Honoree Cards Animation
+    gsap.utils.toArray('.animate-card').forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0, y: 100, duration: 1, delay: i * 0.1, ease: 'power2.out',
+        scrollTrigger: { trigger: card, start: 'top 80%' }
+      });
+    });
+
+    // Messages Animation
+    gsap.utils.toArray('.animate-message').forEach((message, i) => {
+      gsap.from(message, {
+        opacity: 0, y: 50, duration: 1, delay: i * 0.2, ease: 'power2.out',
+        scrollTrigger: { trigger: message, start: 'top 80%' }
+      });
+    });
+
+    // Gallery Animation
+    gsap.from('.animate-gallery > div', {
+      opacity: 0, scale: 0.8, stagger: 0.2, duration: 1, ease: 'back.out(1.7)',
+      scrollTrigger: { trigger: '.animate-gallery', start: 'top 80%' }
+    });
+
+    // Iframe Animation
+    gsap.from('.animate-iframe', {
+      opacity: 0, y: 50, duration: 1, ease: 'power2.out',
+      scrollTrigger: { trigger: '.animate-iframe', start: 'top 80%' }
+    });
+
+    // Organized By Animation
+    gsap.from('.animate-organizer', {
+      opacity: 0, y: 50, duration: 1, ease: 'power2.out',
+      scrollTrigger: { trigger: '.animate-organizer', start: 'top 80%' }
+    });
+  </script>
+</body>
+</html>
